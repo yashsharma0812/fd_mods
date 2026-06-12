@@ -1,0 +1,23 @@
+dataset_path: data/raw/credit_card_transactions-ibm_v2.csv
+target_column: "Is Fraud?"
+user_column: User
+sequence_length: 5
+batch_size: 128
+learning_rate: 0.001
+epochs: 50
+hidden_size: 64
+num_layers: 2
+dropout: 0.2
+train_ratio: 0.70
+val_ratio: 0.15
+test_ratio: 0.15
+random_seed: 42
+use_user_level_split: true
+use_card_as_feature: false
+model_save_path: outputs/models/best_model.pt
+outputs_dir: outputs
+chunksize: 500000
+patience: 7
+gradient_clip: 1.0
+num_workers: 0
+threshold: 0.5

@@ -1,0 +1,23 @@
+dataset_path: data/processed/real_ibm_smoke.csv
+target_column: "Is Fraud?"
+user_column: User
+sequence_length: 5
+batch_size: 32
+learning_rate: 0.001
+epochs: 1
+hidden_size: 16
+num_layers: 1
+dropout: 0.1
+train_ratio: 0.70
+val_ratio: 0.15
+test_ratio: 0.15
+random_seed: 42
+use_user_level_split: true
+use_card_as_feature: false
+model_save_path: outputs/real-smoke/models/best_model.pt
+outputs_dir: outputs/real-smoke
+chunksize: 1000
+patience: 1
+gradient_clip: 1.0
+num_workers: 0
+threshold: 0.5

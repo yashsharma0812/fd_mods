@@ -1,0 +1,23 @@
+dataset_path: data/raw/synthetic_ibm_transactions.csv
+target_column: "Is Fraud?"
+user_column: User
+sequence_length: 5
+batch_size: 32
+learning_rate: 0.003
+epochs: 3
+hidden_size: 16
+num_layers: 1
+dropout: 0.1
+train_ratio: 0.70
+val_ratio: 0.15
+test_ratio: 0.15
+random_seed: 42
+use_user_level_split: true
+use_card_as_feature: false
+model_save_path: outputs/smoke/models/best_model.pt
+outputs_dir: outputs/smoke
+chunksize: 1000
+patience: 3
+gradient_clip: 1.0
+num_workers: 0
+threshold: 0.5
